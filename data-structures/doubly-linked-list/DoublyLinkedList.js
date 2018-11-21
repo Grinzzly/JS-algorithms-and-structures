@@ -30,7 +30,7 @@ class DoublyLinkedList{
 
   removeFromTail() {
     if (!this.head) {
-      return null;
+      return undefined;
     }
 
     const prevNode = this.tail.prev;
@@ -59,7 +59,7 @@ class DoublyLinkedList{
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
-    }else{
+    } else {
       this.head.prev = newNode;
       newNode.next = this.head;
       this.head = newNode;
@@ -72,7 +72,7 @@ class DoublyLinkedList{
 
   removeFromHead() {
     if (!this.head) {
-      return null;
+      return undefined;
     }
 
     const node = this.head.next;
@@ -85,6 +85,41 @@ class DoublyLinkedList{
       this.tail = null;
     }
 
+    this.length--;
+
+    return this;
+  }
+
+  remove(value) {
+    if (!this.length) {
+      return undefined;
+    }
+
+    if (this.head.value === value) {
+      return this.removeFromHead();
+    }
+
+    if (this.tail.value === value) {
+      return this.removeFromTail();
+    }
+
+    let previousNode = this.head;
+    let thisNode = previousNode.next;
+
+    while(thisNode) {
+      if(thisNode.value === value) {
+        break;
+      }
+
+      previousNode = thisNode;
+      thisNode = thisNode.next;
+    }
+
+    if (thisNode === null) {
+      return undefined;
+    }
+
+    previousNode.next = thisNode.next;
     this.length--;
 
     return this;
@@ -116,3 +151,5 @@ dlist.removeFromHead();
 console.log('Whole list after removing head value: ', dlist);
 dlist.removeFromTail();
 console.log('Whole list after removing tail value: ', dlist);
+dlist.remove(2);
+console.log('Whole list after removing 2: ', dlist);

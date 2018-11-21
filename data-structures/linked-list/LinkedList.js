@@ -43,7 +43,7 @@ class LinkedList {
   }
 
   remove(value) {
-    if(!this.length) {
+    if (!this.length) {
       return undefined;
     }
 
