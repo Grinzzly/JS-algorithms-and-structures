@@ -19,6 +19,8 @@ the data.
 * [Stack](data-structures/stack)
 * [Hash Table](data-structures/hash-table)
 * [Trie](data-structures/trie)
+* [Tree](data-structures/tree)
+    * [Binary Search Tree](data-structures/tree/binary-search-tree)
 
 ## Algorithms
 
