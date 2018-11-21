@@ -18,6 +18,7 @@ the data.
 * [Queue](data-structures/queue)
 * [Stack](data-structures/stack)
 * [Hash Table](data-structures/hash-table)
+* [Trie](data-structures/trie)
 
 ## Algorithms
 
