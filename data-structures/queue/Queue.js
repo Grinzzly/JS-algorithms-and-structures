@@ -33,4 +33,3 @@ queue.add(3);
 queue.remove();
 console.log('The wWhole Queue: ', queue);
 console.log('Size of the Queue: ', queue.getSize());
-
