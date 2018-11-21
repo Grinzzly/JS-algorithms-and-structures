@@ -15,6 +15,8 @@ the data.
 
 * [Linked List](data-structures/linked-list)
 * [Doubly Linked List](data-structures/doubly-linked-list)
+* [Queue](data-structures/queue)
+* [Stack](data-structures/stack)
 
 ## Algorithms
 

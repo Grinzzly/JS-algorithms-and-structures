@@ -1,6 +1,7 @@
 class Queue {
   constructor(value) {
-    this.data = [value];
+    this.data = [];
+    this.add(value);
   }
 
   add(value) {
