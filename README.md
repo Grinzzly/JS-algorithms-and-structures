@@ -22,6 +22,7 @@ the data.
 * [Tree](data-structures/tree)
     * [Binary Search Tree](data-structures/tree/binary-search-tree)
     * [AVL Tree](data-structures/tree/avl-tree)
+    * [Red-Black Tree](data-structures/tree/red-black-tree)
 
 ## Algorithms
 
