@@ -30,3 +30,5 @@ a set of rules that precisely define a sequence of operations.
 
 * Mathematical Algorithms
     * [Fibonacci Numbers](algorithms/math/fibonacci)
+* Sorts
+    * [Bubble Sort](algorithms/sorts/bubble-sort)
