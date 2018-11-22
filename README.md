@@ -21,6 +21,7 @@ the data.
 * [Trie](data-structures/trie)
 * [Tree](data-structures/tree)
     * [Binary Search Tree](data-structures/tree/binary-search-tree)
+    * [AVL Tree](data-structures/tree/avl-tree)
 
 ## Algorithms
 

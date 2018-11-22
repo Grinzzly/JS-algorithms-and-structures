@@ -1,5 +1,4 @@
-class Node
-{
+class Node {
   constructor(data)
   {
     this.data = data;
@@ -8,8 +7,7 @@ class Node
   }
 }
 
-class BinarySearchTree
-{
+class BinarySearchTree {
   constructor() {
     this.root = null;
   }
@@ -62,7 +60,7 @@ class BinarySearchTree
       node.left = this.removeNode(node.left, key);
 
       return node;
-    } else if(key > node.data) {
+    } else if (key > node.data) {
       node.right = this.removeNode(node.right, key);
 
       return node;
@@ -75,7 +73,7 @@ class BinarySearchTree
       }
 
       /* Deleting node with one children */
-      if(node.left === null) {
+      if (node.left === null) {
         node = node.right;
 
         return node;
@@ -109,7 +107,7 @@ class BinarySearchTree
 
   /* Performs preorder traversal of a tree */
   preorder(node) {
-    if(node != null) {
+    if (node != null) {
       console.log(node.data);
       this.preorder(node.left);
       this.preorder(node.right);
