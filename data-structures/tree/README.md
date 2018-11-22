@@ -3,6 +3,7 @@
 * [Binary Search Tree](binary-search-tree)
 * [AVL Tree](avl-tree)
 * [Red-Black Tree](red-black-tree)
+* [Segment Tree](segment-tree)
 
 
 In computer science, a **tree** is a widely used abstract data 

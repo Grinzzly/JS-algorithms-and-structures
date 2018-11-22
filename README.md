@@ -1,4 +1,10 @@
-# JavaScript Algorithms and Data Structures
+<h1 align="center">JavaScript Algorithms and Data Structures</h1>
+
+<div align="center">
+  <sub>The little & not so little data structures and algorithms. Coded by
+  <a href="https://github.com/Grinzzly">Grinzzly</a>
+  </a>
+</div>
 
 This repository contains JavaScript based examples of many
 popular algorithms and data structures.
@@ -23,6 +29,7 @@ the data.
     * [Binary Search Tree](data-structures/tree/binary-search-tree)
     * [AVL Tree](data-structures/tree/avl-tree)
     * [Red-Black Tree](data-structures/tree/red-black-tree)
+    * [Segment Tree](data-structures/tree/segment-tree)
 
 ## Algorithms
 
