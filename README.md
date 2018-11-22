@@ -32,3 +32,9 @@ a set of rules that precisely define a sequence of operations.
     * [Fibonacci Numbers](algorithms/math/fibonacci)
 * Sorts
     * [Bubble Sort](algorithms/sorts/bubble-sort)
+    * [Selection Sort](algorithms/sorts/selection-sort)
+    * [Insertion Sort](algorithms/sorts/insertion-sort)
+    * [Heap Sort](algorithms/sorts/heap-sort)
+    * [Merge Sort](algorithms/sorts/merge-sort)
+    * [Quick Sort](algorithms/sorts/quick-sort)
+    * [Bucket Sort](algorithms/sorts/bucket-sort)

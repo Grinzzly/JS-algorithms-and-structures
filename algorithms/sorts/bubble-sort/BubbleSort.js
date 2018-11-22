@@ -15,5 +15,5 @@ const bubbleSort = (items) => {
   return items;
 };
 
-const a = [3, 5, 7, 4, 1, 2, 8];
-console.log(`${a} sorted through bubble sort it is ${bubbleSort(a)}`);
+const list = [3, 5, 7, 4, 1, 2, 8];
+console.log(`${list} sorted through bubble sort is ${bubbleSort(list)}`);
