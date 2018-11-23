@@ -5,6 +5,8 @@
   <a href="https://github.com/Grinzzly">Grinzzly</a>
   </a>
 </div>
+<br>
+<br>
 
 This repository contains JavaScript based examples of many
 popular algorithms and data structures.
@@ -21,12 +23,15 @@ the data.
 
 * [Linked List](data-structures/linked-list)
 * [Doubly Linked List](data-structures/doubly-linked-list)
-* [Queue](data-structures/queue)
 * [Stack](data-structures/stack)
+* [Heap](data-structures/heap)
+* [Queue](data-structures/queue)
+* [Priority Queue](data-structures/priority-queue)
 * [Hash Table](data-structures/hash-table)
 * [Trie](data-structures/trie)
 * [Tree](data-structures/tree)
     * [Binary Search Tree](data-structures/tree/binary-search-tree)
+    * [Binary Indexed Tree (Fenwick)](data-structures/tree/fenwick-tree)
     * [AVL Tree](data-structures/tree/avl-tree)
     * [Red-Black Tree](data-structures/tree/red-black-tree)
     * [Segment Tree](data-structures/tree/segment-tree)

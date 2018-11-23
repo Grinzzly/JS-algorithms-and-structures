@@ -1,9 +1,10 @@
 const quickSort = (items) => {
-  if (items.length <= 1) {
+  const l = items.length;
+
+  if (l <= 1) {
     return items;
   }
 
-  const l = items.length;
   const pivot = items.pop();
   const left = [];
   const right = [];
