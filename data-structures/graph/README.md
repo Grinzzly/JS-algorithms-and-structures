@@ -25,6 +25,18 @@ that is meant to implement the concept from mathematics.
 
 ![Graph](https://www.tutorialspoint.com/data_structures_algorithms/images/graph.jpg)
 
+There is two ways of graph implementation:
+ * Through **Adjacency List**
+ 
+   In graph theory and computer science, an **adjacency list** is a collection of unordered lists 
+   used to represent a finite graph. Each list describes the set of neighbors of a vertex in the graph. 
+   This is one of several commonly used representations of graphs for use in computer programs.
+     
+ * Through Adjacency Matrix
+    
+   In graph theory and computer science, an **adjacency matrix** is a square matrix used to represent a finite graph. 
+   The elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
+
 [JS implementation](Graph.js)
 
 ## References
