@@ -157,8 +157,34 @@ console.log('Graph: ', graph.getGraph());
  * F -> E C
  */
 
+/*
+*           B
+*         /  \
+*        A    C
+*       / \  / \
+*      D - E  - F
+*/
+
 console.log('BFS for "A" node: ', graph.bfs('A'));
 /* A B D E C F */
 
+/*
+*        (2)B
+*         /  \
+*     (1)A    C(5)
+*       / \  / \
+*   (3)D - E  - F(6)
+*         (4)
+*/
+
 console.log('DFS for "A" node: ', graph.dfs('A'));
 /* A B C E D F */
+
+/*
+*        (2)B
+*         /  \
+*     (1)A    C(3)
+*       / \  / \
+*   (5)D - E  - F(6)
+*         (4)
+*/
