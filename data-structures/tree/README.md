@@ -1,6 +1,7 @@
 # Tree
 
 * [Binary Search Tree](binary-search-tree)
+* [Binary Indexed Tree (Fenwick)](fenwick-tree)
 * [AVL Tree](avl-tree)
 * [Red-Black Tree](red-black-tree)
 * [Segment Tree](segment-tree)
