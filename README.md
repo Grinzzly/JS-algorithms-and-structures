@@ -35,6 +35,7 @@ the data.
     * [AVL Tree](data-structures/tree/avl-tree)
     * [Red-Black Tree](data-structures/tree/red-black-tree)
     * [Segment Tree](data-structures/tree/segment-tree)
+* [Graph](data-structures/graph)
 
 ## Algorithms
 
@@ -51,3 +52,6 @@ a set of rules that precisely define a sequence of operations.
     * [Merge Sort](algorithms/sorts/merge-sort)
     * [Quick Sort](algorithms/sorts/quick-sort)
     * [Bucket Sort](algorithms/sorts/bucket-sort)
+* Graphs
+    * [Breadth First Search (BFS)](algorithms/graphs/bfs)
+    * [Depth First Search (BFS)](algorithms/graphs/dfs)
