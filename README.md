@@ -36,6 +36,7 @@ the data.
     * [Red-Black Tree](data-structures/tree/red-black-tree)
     * [Segment Tree](data-structures/tree/segment-tree)
 * [Graph](data-structures/graph)
+* [Disjoint Set](data-structures/disjoint-set)
 
 ## Algorithms
 
