@@ -46,6 +46,7 @@ a set of rules that precisely define a sequence of operations.
 * Mathematical Algorithms
     * [Factorial](algorithms/math/factorial)
     * [Fibonacci Numbers](algorithms/math/fibonacci)
+    * [Euclidean Algorithm](algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
 * Sorts
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
