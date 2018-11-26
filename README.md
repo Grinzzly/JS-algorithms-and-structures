@@ -44,6 +44,7 @@ An algorithm is an unambiguous specification of how to solve a class of problems
 a set of rules that precisely define a sequence of operations.
 
 * Mathematical Algorithms
+    * [Factorial](algorithms/math/factorial)
     * [Fibonacci Numbers](algorithms/math/fibonacci)
 * Sorts
     * [Bubble Sort](algorithms/sorts/bubble-sort)
