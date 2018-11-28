@@ -49,7 +49,7 @@ a set of rules that precisely define a sequence of operations.
     * [Fibonacci Numbers](algorithms/math/fibonacci)
     * [Euclidean Algorithm (GCD)](algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
     * [Least Common Multiple (LCM)](algorithms/math/least-common-multiple)
-    * [Primality Test](algorithms/math/primality-test)
+    * [Primality Test](algorithms/math/primality-test) -check whether number is prime or not 
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
@@ -61,3 +61,5 @@ a set of rules that precisely define a sequence of operations.
 * Graphs
     * [Breadth First Search (BFS)](algorithms/graphs/bfs)
     * [Depth First Search (DFS)](algorithms/graphs/dfs)
+* Strings
+    * [Hamming Distance](algorithms/strings/hamming-distance) - amount of positions at which the symbols are different
