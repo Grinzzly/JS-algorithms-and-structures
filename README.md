@@ -49,7 +49,8 @@ a set of rules that precisely define a sequence of operations.
     * [Fibonacci Numbers](algorithms/math/fibonacci)
     * [Euclidean Algorithm (GCD)](algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
     * [Least Common Multiple (LCM)](algorithms/math/least-common-multiple)
-* Sortings
+    * [Primality Test](algorithms/math/primality-test)
+* Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
     * [Insertion Sort](algorithms/sorts/insertion-sort)
