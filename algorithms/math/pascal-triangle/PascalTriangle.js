@@ -1,0 +1,43 @@
+const pascalTriangle = (lineNumber) => {
+  const currentLine = [1];
+
+  const currentLineSize = lineNumber + 1;
+
+  for (let numIndex = 1; numIndex < currentLineSize; numIndex += 1) {
+    currentLine[numIndex] = currentLine[numIndex - 1] * (lineNumber - numIndex + 1) / numIndex;
+  }
+
+  return currentLine;
+};
+
+const pascalTriangleRecursive = (lineNumber) => {
+  if (lineNumber === 0) {
+    return [1];
+  }
+
+  const currentLineSize = lineNumber + 1;
+  const previousLineSize = currentLineSize - 1;
+
+  /* Create container for current line values. */
+  const currentLine = [];
+
+  /* Calculate current line based on previous one. */
+  const previousLine = pascalTriangleRecursive(lineNumber - 1);
+
+  /**
+   * Let's go through all elements of current line except the first and
+   * last one (since they were and will be filled with 1's) and calculate
+   * current coefficient based on previous line.
+   */
+  for (let numIndex = 0; numIndex < currentLineSize; numIndex += 1) {
+    const leftCoefficient = (numIndex - 1) >= 0 ? previousLine[numIndex - 1] : 0;
+    const rightCoefficient = numIndex < previousLineSize ? previousLine[numIndex] : 0;
+
+    currentLine[numIndex] = leftCoefficient + rightCoefficient;
+  }
+
+  return currentLine;
+};
+
+console.log('Pascal\'s Triangle\'s 6th line (iterative):', pascalTriangle(6));
+console.log('Pascal\'s Triangle\'s 11th line (recursive):', pascalTriangleRecursive(11));
