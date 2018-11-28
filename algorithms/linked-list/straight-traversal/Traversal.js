@@ -1,3 +1,14 @@
+const traversal = (linkedList, callback) => {
+  let currentNode = linkedList.head;
+
+  while (currentNode) {
+    callback(currentNode.value);
+    currentNode = currentNode.next;
+  }
+};
+
+/* Everything bellow this line for demo purposes only */
+
 class LinkedList {
   constructor(value) {
     this.head = null;
@@ -74,15 +85,18 @@ class LinkedList {
   }
 }
 
-const list = new LinkedList(3);
+const linkedList = new LinkedList();
 
-list
+linkedList
+  .addToHead(1)
   .addToHead(2)
-  .addToHead(1);
+  .addToHead(3);
 
-console.log('Whole list: ', list);
-console.log('Trying to find 1: ', list.find(1));
+const traversedNodeValues = [];
+const traversalCallback = (nodeValue) => {
+  traversedNodeValues.push(nodeValue);
+};
 
-list.remove(2);
+traversal(linkedList, traversalCallback);
 
-console.log('Whole list after removing 2: ', list);
+console.log('Straight traversal results:', traversedNodeValues);
