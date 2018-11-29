@@ -1,10 +1,12 @@
-const traversal = (linkedList, callback) => {
-  let currentNode = linkedList.head;
-
-  while (currentNode) {
-    callback(currentNode.value);
-    currentNode = currentNode.next;
+const reverseTraversalRecursive = (node, callback) => {
+  if (node) {
+    reverseTraversalRecursive(node.next, callback);
+    callback(node.value);
   }
+};
+
+const reverseTraversal = (linkedList, callback) => {
+  reverseTraversalRecursive(linkedList.head, callback);
 };
 
 /* Everything bellow this line for demo purposes only */
@@ -53,6 +55,6 @@ const traversalCallback = (nodeValue) => {
   traversedNodeValues.push(nodeValue);
 };
 
-traversal(linkedList, traversalCallback);
+reverseTraversal(linkedList, traversalCallback);
 
-console.log('Straight traversal results:', traversedNodeValues);
+console.log('Reverse traversal results:', traversedNodeValues);

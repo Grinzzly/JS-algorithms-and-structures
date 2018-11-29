@@ -61,6 +61,7 @@ a set of rules that precisely define a sequence of operations.
     * [Bucket Sort](algorithms/sorts/bucket-sort)
 * Linked List's Traversals
     * [Straight](algorithms/linked-list/straight-traversal)
+    * [Reverse](algorithms/linked-list/reverse-traversal)
 * Graphs
     * [Breadth First Search (BFS)](algorithms/graphs/bfs)
     * [Depth First Search (DFS)](algorithms/graphs/dfs)
