@@ -65,5 +65,6 @@ a set of rules that precisely define a sequence of operations.
 * Graphs
     * [Breadth First Search (BFS)](algorithms/graphs/bfs)
     * [Depth First Search (DFS)](algorithms/graphs/dfs)
+    * [Dijkstra Algorithm](algorithms/graphs/dijkstra) - finding shortest paths from single vertex
 * Strings
     * [Hamming Distance](algorithms/strings/hamming-distance) - amount of positions at which the symbols are different
