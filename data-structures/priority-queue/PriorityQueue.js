@@ -1,96 +1,84 @@
-const top = 0;
-const parent = i => ((i + 1) >>> 1) - 1;
-const left = i => (i << 1) + 1;
-const right = i => (i + 1) << 1;
+class QElement {
+  constructor(element, priority) {
+    this.element = element;
+    this.priority = priority;
+  }
+}
 
 class PriorityQueue {
   constructor() {
-    this.heap = [];
-    this.comparator = (a, b) => a > b;
+    this.items = [];
   }
 
-  size() {
-    return this.heap.length;
+  enqueue(element, priority) {
+    /* Creating object from queue element */
+    const qElement = new QElement(element, priority);
+    let contain = false;
+
+    /**
+     * Iterating through the entire
+     * item array to add element at the
+     * correct location of the Queue
+     */
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].priority < qElement.priority) {
+        /* Once the correct location is found it is enqueued */
+        this.items.splice(i, 0, qElement);
+        contain = true;
+
+        break;
+      }
+    }
+
+    /**
+     * if the element have the highest priority
+     * it is added at the end of the queue
+     */
+    if (!contain) {
+      this.items.push(qElement);
+    }
+
+    return this;
   }
 
-  isEmpty() {
-    return this.size() === 0;
+  dequeue() {
+    if (this.isEmpty()) {
+      return 'Queue is empty';
+    }
+
+    return this.items.shift();
   }
 
   peek() {
-    return this.heap[top];
-  }
-
-  push(...values) {
-    values.forEach(value => {
-      this.heap.push(value);
-      this.siftUp();
-    });
-
-    return this.size();
-  }
-
-  pop() {
-    const poppedValue = this.peek();
-    const bottom = this.size() - 1;
-
-    if (bottom > top) {
-      this.swap(top, bottom);
+    if (this.isEmpty()) {
+      return 'Queue is empty';
     }
 
-    this.heap.pop();
-    this.siftDown();
-
-    return poppedValue;
+    return this.items[0];
   }
 
-  replace(value) {
-    const replacedValue = this.peek();
-
-    this.heap[top] = value;
-    this.siftDown();
-
-    return replacedValue;
-  }
-
-  greater(i, j) {
-    return this.comparator(this.heap[i], this.heap[j]);
-  }
-
-  swap(i, j) {
-    [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
-  }
-  siftUp() {
-    let node = this.size() - 1;
-
-    while (node > top && this.greater(node, parent(node))) {
-      this.swap(node, parent(node));
-      node = parent(node);
+  pok() {
+    if (this.isEmpty()) {
+      return 'Queue is empty';
     }
+
+    return this.items[this.items.length - 1];
   }
 
-  siftDown() {
-    let node = top;
-
-    while (
-      (left(node) < this.size() && this.greater(left(node), node)) ||
-      (right(node) < this.size() && this.greater(right(node), node))
-    ) {
-      let maxChild = (right(node) < this.size() && this.greater(right(node), left(node))) ? right(node) : left(node);
-      this.swap(node, maxChild);
-
-      node = maxChild;
-    }
+  isEmpty() {
+    return this.items.length === 0;
   }
 }
 
 const queue = new PriorityQueue();
 
-queue.push(10, 20, 30, 40, 50);
-console.log('Top: ', queue.peek()); // 50
-console.log('Size: ', queue.size()); // 5
+queue
+  .enqueue(10, 1)
+  .enqueue(5, 2)
+  .enqueue(3, 0);
+console.log('Top: ', queue.peek()); // 3
 console.log('Contents:');
 
 while (!queue.isEmpty()) {
-  console.log(queue.pop()); // 40, 30, 20, 10
+  console.log(queue.dequeue()); // 3, 10, 5
 }

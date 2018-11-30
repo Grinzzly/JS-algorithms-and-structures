@@ -1,7 +1,5 @@
 class Graph {
-  constructor(verticesNum)
-  {
-    this.verticesNum = verticesNum;
+  constructor() {
     this.adjacencyList = new Map();
   }
 
@@ -14,28 +12,20 @@ class Graph {
     this.adjacencyList.get(w).push(v);
   }
 
+  getVertices(edge) {
+    return this.adjacencyList.get(edge);
+  }
+
+  getAllEdges() {
+    return this.adjacencyList.keys();
+  }
+
   getGraph() {
-    const keys = this.adjacencyList.keys();
+    const keys = this.getAllEdges();
     const graph = {};
 
     for (let i of keys) {
-      /**
-       * Great the corresponding adjacency list
-       * for the vertex
-       */
-      const values = this.adjacencyList.get(i);
-      const adjListOfVertex = [];
-
-      /**
-       * Iterate over the adjacency list
-       * concatenate the values into a string
-       */
-      for (let j of values) {
-        adjListOfVertex.push(j);
-      }
-
-      /* Print the vertex and its adjacency list */
-      graph[i]= adjListOfVertex.join(', ');
+      graph[i]= this.getVertices(i).join(', ');
     }
 
     return graph;
@@ -44,7 +34,7 @@ class Graph {
   /* Breadth First Search from the given startingNode */
   bfs(startingNode) {
     /* Create a visited array */
-    const visited = new Array(this.verticesNum).fill(false);
+    const visited = new Array(this.adjacencyList.size).fill(false);
     const searchOutput = [];
 
     /* Create an object for queue */

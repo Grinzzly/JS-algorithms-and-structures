@@ -37,7 +37,7 @@ the data.
     * [Segment Tree](data-structures/tree/segment-tree)
 * [Graph](data-structures/graph)
 * [Bloom Filter](data-structures/bloom-filter)
-* [Disjoint Set](data-structures/disjoint-set)
+* [Disjoint Set (Union Find)](data-structures/disjoint-set)
 
 ## Algorithms
 
@@ -66,5 +66,6 @@ a set of rules that precisely define a sequence of operations.
     * [Breadth First Search (BFS)](algorithms/graphs/bfs)
     * [Depth First Search (DFS)](algorithms/graphs/dfs)
     * [Dijkstra Algorithm](algorithms/graphs/dijkstra) - finding shortest paths from single vertex
+    * [Kruskal Algorithm](algorithms/graphs/kruskal) - inding Minimum Spanning Tree (MST) for weighted undirected graph
 * Strings
     * [Hamming Distance](algorithms/strings/hamming-distance) - amount of positions at which the symbols are different
