@@ -1,180 +1,362 @@
 class Graph {
-  constructor() {
-    this.adjacencyList = new Map();
+  constructor(isDirected = false) {
+    this.vertices = {};
+    this.edges = {};
+    this.isDirected = isDirected;
   }
 
-  addVertex(v) {
-    this.adjacencyList.set(v, []);
+  addVertex(newVertex) {
+    this.vertices[newVertex.getKey()] = newVertex;
+
+    return this;
   }
 
-  addEdge(v, w) {
-    this.adjacencyList.get(v).push(w);
-    this.adjacencyList.get(w).push(v);
+  getVertexByKey(vertexKey) {
+    return this.vertices[vertexKey];
   }
 
-  getVertices(edge) {
-    return this.adjacencyList.get(edge);
+  getNeighbors(vertex) {
+    return vertex.getNeighbors();
+  }
+
+  getAllVertices() {
+    return Object.values(this.vertices);
   }
 
   getAllEdges() {
-    return this.adjacencyList.keys();
+    return Object.values(this.edges);
   }
 
-  getGraph() {
-    const keys = this.getAllEdges();
-    const graph = {};
+  addEdge(edge) {
+    /* Try to find and end start vertices. */
+    let startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    let endVertex = this.getVertexByKey(edge.endVertex.getKey());
 
-    for (let i of keys) {
-      graph[i]= this.getVertices(i).join(', ');
+    /* Insert start vertex if it wasn't inserted. */
+    if (!startVertex) {
+      this.addVertex(edge.startVertex);
+      startVertex = this.getVertexByKey(edge.startVertex.getKey());
     }
 
-    return graph;
-  }
-
-  /* Breadth First Search from the given startingNode */
-  bfs(startingNode) {
-    /* Create a visited array */
-    const visited = new Array(this.adjacencyList.size).fill(false);
-    const searchOutput = [];
-
-    /* Create an object for queue */
-    const queue = new Queue();
-
-    /* Add the starting node to the queue */
-    visited[startingNode] = true;
-    queue.enqueue(startingNode);
-
-    /* Loop until queue is empty */
-    while (!queue.isEmpty()) {
-      const queueElement = queue.dequeue();
-
-      /* passing the current vertex to callback function */
-      searchOutput.push(queueElement);
-
-      /* Get the adjacent list for current vertex */
-      const adjListOfVertex = this.adjacencyList.get(queueElement);
-
-      /**
-       * Loop through the list and add the element to the
-       * queue if it is not processed yet
-       */
-      for (let i in adjListOfVertex) {
-        const adjacency = adjListOfVertex[i];
-
-        if (!visited[adjacency]) {
-          visited[adjacency] = true;
-          queue.enqueue(adjacency);
-        }
-      }
+    /* Insert end vertex if it wasn't inserted. */
+    if (!endVertex) {
+      this.addVertex(edge.endVertex);
+      endVertex = this.getVertexByKey(edge.endVertex.getKey());
     }
 
-    return searchOutput.join(', ');
-  }
-
-  /* Depth First Search from the given startingNode */
-  dfs(startingNode) {
-    /* Create a visited array */
-    const visited = new Array(this.verticesNum).fill(false);
-    const searchOutput = [];
-
-    this.DFSRec(startingNode, visited, searchOutput);
-
-    return searchOutput.join(', ');
-  }
-
-  /**
-   * Recursive function which process and explore
-   * all the adjacent vertex of the vertex with which it is called
-   */
-  DFSRec(vertex, visited, output) {
-    visited[vertex] = true;
-    output.push(vertex);
-
-    const neighbours = this.adjacencyList.get(vertex);
-
-    for (let i in neighbours) {
-      const element = neighbours[i];
-
-      if (!visited[element])
-        this.DFSRec(element, visited, output);
+    /* Check if edge has been already added. */
+    if (this.edges[edge.getKey()]) {
+      throw new Error('Edge has already been added before');
+    } else {
+      this.edges[edge.getKey()] = edge;
     }
+
+    if (this.isDirected) {
+      startVertex.addEdge(edge);
+    } else {
+      startVertex.addEdge(edge);
+      endVertex.addEdge(edge);
+    }
+
+    return this;
+  }
+
+  deleteEdge(edge) {
+    if (this.edges[edge.getKey()]) {
+      delete this.edges[edge.getKey()];
+    } else {
+      throw new Error('Edge not found in graph');
+    }
+
+    // Try to find and end start vertices and delete edge from them.
+    const startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    const endVertex = this.getVertexByKey(edge.endVertex.getKey());
+
+    startVertex.deleteEdge(edge);
+    endVertex.deleteEdge(edge);
+  }
+
+  findEdge(startVertex, endVertex) {
+    const vertex = this.getVertexByKey(startVertex.getKey());
+
+    if (!vertex) {
+      return null;
+    }
+
+    return vertex.findEdge(endVertex);
+  }
+
+  getWeight() {
+    return this.getAllEdges().reduce((weight, graphEdge) => {
+      return weight + graphEdge.weight;
+    }, 0);
+  }
+
+  reverse() {
+    this.getAllEdges().forEach((edge) => {
+      /* Delete straight edge from graph and from vertices. */
+      this.deleteEdge(edge);
+
+      edge.reverse();
+
+      /* Add reversed edge back to the graph and its vertices. */
+      this.addEdge(edge);
+    });
+
+    return this;
+  }
+
+  getVerticesIndices() {
+    const verticesIndices = {};
+    this.getAllVertices().forEach((vertex, index) => {
+      verticesIndices[vertex.getKey()] = index;
+    });
+
+    return verticesIndices;
+  }
+
+  getAdjacencyMatrix() {
+    const vertices = this.getAllVertices();
+    const verticesIndices = this.getVerticesIndices();
+
+    /**
+     * Init matrix with infinities meaning that there is no ways of
+     * getting from one vertex to another yet.
+     */
+    const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
+      return Array(vertices.length).fill(Infinity);
+    });
+
+    vertices.forEach((vertex, vertexIndex) => {
+      vertex.getNeighbors().forEach((neighbor) => {
+        const neighborIndex = verticesIndices[neighbor.getKey()];
+
+        adjacencyMatrix[vertexIndex][neighborIndex] = this.findEdge(vertex, neighbor).weight;
+      });
+    });
+
+    return adjacencyMatrix;
+  }
+
+  toString() {
+    return Object.keys(this.vertices).toString();
   }
 }
 
-class Queue {
+class GraphEdge {
+  constructor(startVertex, endVertex, weight = 0) {
+    this.startVertex = startVertex;
+    this.endVertex = endVertex;
+    this.weight = weight;
+  }
+
+  getKey() {
+    const startVertexKey = this.startVertex.getKey();
+    const endVertexKey = this.endVertex.getKey();
+
+    return `${startVertexKey}_${endVertexKey}`;
+  }
+
+  reverse() {
+    const tmp = this.startVertex;
+    this.startVertex = this.endVertex;
+    this.endVertex = tmp;
+
+    return this;
+  }
+
+  toString() {
+    return this.getKey();
+  }
+}
+
+class GraphVertex {
+  constructor(value) {
+    if (value === undefined) {
+      throw new Error('Graph vertex must have a value');
+    }
+
+    this.value = value;
+    this.edges = new LinkedList();
+  }
+
+  addEdge(edge) {
+    this.edges.addToHead(edge);
+
+    return this;
+  }
+
+  deleteEdge(edge) {
+    this.edges.remove(edge);
+  }
+
+  getNeighbors() {
+    const edges = this.edges.toArray();
+
+    const neighborsConverter = (node) => {
+      return node.value.startVertex === this ? node.value.endVertex : node.value.startVertex;
+    };
+
+    /**
+     * Return either start or end vertex.
+     * For undirected graphs it is possible that current vertex will be the end one.
+     */
+    return edges.map(neighborsConverter);
+  }
+
+  getEdges() {
+    return this.edges.toArray().map(linkedListNode => linkedListNode.value);
+  }
+
+  getDegree() {
+    return this.edges.toArray().length;
+  }
+
+  hasEdge(requiredEdge) {
+    const edgeNode = this.edges.find({
+      callback: edge => edge === requiredEdge,
+    });
+
+    return !!edgeNode;
+  }
+
+  hasNeighbor(vertex) {
+    const vertexNode = this.edges.find({
+      callback: edge => edge.startVertex === vertex || edge.endVertex === vertex,
+    });
+
+    return !!vertexNode;
+  }
+
+  findEdge(vertex) {
+    const edgeFinder = (edge) => {
+      return edge.startVertex === vertex || edge.endVertex === vertex;
+    };
+
+    const edge = this.edges.find({ callback: edgeFinder });
+
+    return edge ? edge.value : null;
+  }
+
+  getKey() {
+    return this.value;
+  }
+
+  deleteAllEdges() {
+    this.getEdges().forEach(edge => this.deleteEdge(edge));
+
+    return this;
+  }
+
+  toString(callback) {
+    return callback ? callback(this.value) : `${this.value}`;
+  }
+}
+
+class LinkedList {
   constructor() {
-    this.data = [];
+    this.head = null;
+    this.length = 0;
   }
 
-  enqueue(value) {
-    this.data.unshift(value);
+  addToHead(value) {
+    const newNode = { value };
+
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+
+    return this;
   }
 
-  dequeue() {
-    return this.data.pop();
+  removeFromHead() {
+    if (!this.length) {
+      return undefined;
+    }
+
+    const value = this.head.value;
+
+    this.head = this.head.next;
+    this.length--;
+
+    return value;
   }
 
-  isEmpty() {
-    return !this.data.length;
+  find(value) {
+    let thisNode = this.head;
+
+    while(thisNode) {
+      if(thisNode.value === value) {
+        return thisNode;
+      }
+
+      thisNode = thisNode.next;
+    }
+
+    return thisNode;
+  }
+
+  remove(value) {
+    if (!this.length) {
+      return undefined;
+    }
+
+    if (this.head.value === value) {
+      return this.removeFromHead();
+    }
+
+    let previousNode = this.head;
+    let thisNode = previousNode.next;
+
+    while(thisNode) {
+      if(thisNode.value === value) {
+        break;
+      }
+
+      previousNode = thisNode;
+      thisNode = thisNode.next;
+    }
+
+    if (thisNode === null) {
+      return undefined;
+    }
+
+    previousNode.next = thisNode.next;
+    this.length--;
+
+    return this;
+  }
+
+  toArray() {
+    const nodes = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+
+    return nodes;
   }
 }
 
-const graph = new Graph(6);
-const vertices = [ 'A', 'B', 'C', 'D', 'E', 'F' ];
+const graph = new Graph();
+const vertexA = new GraphVertex('A');
+const vertexB = new GraphVertex('B');
+const edgeAB = new GraphEdge(vertexA, vertexB);
 
-/* adding vertices */
-for (let i = 0; i < vertices.length; i++) {
-  graph.addVertex(vertices[i]);
-}
+graph.addEdge(edgeAB);
+console.log('All Graph vertices: ', graph.getAllVertices());
 
-/* Adding edges */
-graph.addEdge('A', 'B');
-graph.addEdge('A', 'D');
-graph.addEdge('A', 'E');
-graph.addEdge('B', 'C');
-graph.addEdge('D', 'E');
-graph.addEdge('E', 'F');
-graph.addEdge('E', 'C');
-graph.addEdge('C', 'F');
+const directedGraph = new Graph(true);
 
-console.log('Graph: ', graph.getGraph());
-/**
- * A -> B D E
- * B -> A C
- * C -> B E F
- * D -> A E
- * E -> A D F C
- * F -> E C
- */
+directedGraph.addEdge(edgeAB);
 
-/*
-*           B
-*         /  \
-*        A    C
-*       / \  / \
-*      D - E  - F
-*/
+const graphVertexA = graph.getVertexByKey(vertexA.getKey());
+const graphVertexB = graph.getVertexByKey(vertexB.getKey());
 
-console.log('BFS for "A" node: ', graph.bfs('A'));
-/* A B D E C F */
-
-/*
-*        (2)B
-*         /  \
-*     (1)A    C(5)
-*       / \  / \
-*   (3)D - E  - F(6)
-*         (4)
-*/
-
-console.log('DFS for "A" node: ', graph.dfs('A'));
-/* A B C E D F */
-
-/*
-*        (2)B
-*         /  \
-*     (1)A    C(3)
-*       / \  / \
-*   (5)D - E  - F(6)
-*         (4)
-*/
+console.log(
+  'Get A and B vertices neighbors',
+  graphVertexA.getNeighbors(),
+  graphVertexB.getNeighbors(),
+);
