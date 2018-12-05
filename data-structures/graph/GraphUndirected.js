@@ -1,4 +1,4 @@
-class GraphUndirected {
+class Graph {
   constructor() {
     this.adjacencyList = new Map();
   }
@@ -119,7 +119,7 @@ class Queue {
   }
 }
 
-const graph = new GraphUndirected(6);
+const graph = new Graph(6);
 const vertices = [ 'A', 'B', 'C', 'D', 'E', 'F' ];
 
 /* adding vertices */

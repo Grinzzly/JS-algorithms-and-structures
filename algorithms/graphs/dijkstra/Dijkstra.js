@@ -71,7 +71,7 @@ const problem = {
   B: {A: 8, D: 7},
   C: {D: 6, finish: 3},
   D: {finish: 1},
-  finish: {}
+  finish: {},
 };
 
 /*

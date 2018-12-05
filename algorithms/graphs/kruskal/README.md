@@ -41,6 +41,8 @@ This figure shows there may be more than one minimum spanning
 tree in a graph. In the figure, the two trees below the graph 
 are two possibilities of minimum spanning tree of the given graph.
 
+[JS implementation](Kruskal.js)
+
 ## References
 
 - [Minimum Spanning Tree on Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree)
