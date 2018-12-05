@@ -66,6 +66,7 @@ a set of rules that precisely define a sequence of operations.
     * [Breadth First Search (BFS)](algorithms/graphs/bfs)
     * [Depth First Search (DFS)](algorithms/graphs/dfs)
     * [Dijkstra Algorithm](algorithms/graphs/dijkstra) - finding shortest paths from single vertex
-    * [Kruskal Algorithm](algorithms/graphs/kruskal) - inding Minimum Spanning Tree (MST) for weighted undirected graph
+    * [Kruskal Algorithm](algorithms/graphs/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+    * [Bellman-Ford Algorithm](algorithms/graphs/bellman-ford) - finding shortest paths to all graph vertices from given one
 * Strings
     * [Hamming Distance](algorithms/strings/hamming-distance) - amount of positions at which the symbols are different
