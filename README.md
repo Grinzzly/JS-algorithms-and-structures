@@ -59,6 +59,7 @@ a set of rules that precisely define a sequence of operations.
     * [Merge Sort](algorithms/sorts/merge-sort)
     * [Quick Sort](algorithms/sorts/quick-sort)
     * [Bucket Sort](algorithms/sorts/bucket-sort)
+    * [Counting Sort](algorithms/sorts/counting-sort)
 * Linked List's Traversals
     * [Straight](algorithms/linked-list/straight-traversal)
     * [Reverse](algorithms/linked-list/reverse-traversal)
