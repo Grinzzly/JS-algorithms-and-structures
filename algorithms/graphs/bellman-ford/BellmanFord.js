@@ -9,6 +9,7 @@ const bellmanFord = (graph, startVertex) => {
   distances[startVertex.getKey()] = 0;
   graph.getAllVertices().forEach((vertex) => {
     previousVertices[vertex.getKey()] = null;
+
     if (vertex.getKey() !== startVertex.getKey()) {
       distances[vertex.getKey()] = Infinity;
     }
