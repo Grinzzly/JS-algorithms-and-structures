@@ -10,9 +10,7 @@ const linearSearch = (array, toFind) => {
 
 const fruits = ['apples', 'bananas', 'cherries'];
 
-
 console.log('Find cherries index in fruits array', linearSearch(fruits, 'cherries'));
-
 
 const isCherries = fruit => fruit === 'cherries';
 const index = fruits.findIndex(isCherries);
