@@ -62,6 +62,7 @@ a set of rules that precisely define a sequence of operations.
     * [Counting Sort](algorithms/sorts/counting-sort)
 * Searches
     * [Linear Search](algorithms/searches/linear-search)
+    * [Binary Search](algorithms/searches/binary-search)
     * [Jump Search](algorithms/searches/jump-search)
 * Linked List
     * [Straight Traversal](algorithms/linked-list/straight-traversal)
