@@ -27,6 +27,8 @@ than or equal to `n`. For example:
 | 14    | 87 178 291 200              |
 | 15    | 1 307 674 368 000           |
 
+> See [JS implementation](Factorial.js) of Factorial for further explanation.
+
 ## References
 
 [Wikipedia](https://en.wikipedia.org/wiki/Factorial)

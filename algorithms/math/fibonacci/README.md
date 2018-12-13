@@ -15,7 +15,7 @@ The Fibonacci spiral: an approximation of the golden spiral created by drawing c
 
 ![Fibonacci Spiral](https://upload.wikimedia.org/wikipedia/commons/2/2e/FibonacciSpiral.svg)
 
-[JS implementation](Fibonacci.js)
+> See [JS implementation](Fibonacci.js) of Fibonacci for further explanation.
 
 ## References
 

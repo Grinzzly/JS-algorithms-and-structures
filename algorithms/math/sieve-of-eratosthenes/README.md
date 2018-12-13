@@ -19,7 +19,7 @@ An improvement of this algorithm is, in step 4, start marking multiples
 of `p` from `p * p`, and not from `2 * p`. The reason why this works is because, 
 at that point, smaller multiples of `p` will have already been marked `false`.
 
-[JS implementation](SieveOfEratosthenes.js)
+> See [JS implementation](SieveOfEratosthenes.js) of Sieve of Eratosthenes for further details.
 
 ## Example
 

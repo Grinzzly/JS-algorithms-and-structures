@@ -19,7 +19,7 @@ a computationally difficult problem, whereas primality testing
 is comparatively easy (its running time is polynomial in the 
 size of the input). 
 
-[JS implementation](PrimalityTest.js)
+> See [JS implementation](PrimalityTest.js) of Primality Test for further explanation.
 
 ## References
 

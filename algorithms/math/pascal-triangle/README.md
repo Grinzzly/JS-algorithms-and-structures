@@ -58,7 +58,7 @@ C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
 So `C(lineNumber, i)` can be calculated 
 from `C(lineNumber, i - 1)` in `O(1)` time.
 
-[JS implementation](PascalTriangle.js)
+> See [JS implementation](PascalTriangle.js) of Pascal Triangle for further explanation.
 
 ## References
 

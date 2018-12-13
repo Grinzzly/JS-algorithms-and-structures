@@ -1,4 +1,4 @@
-# Euclidean algorithm
+# Euclidean Algorithm
 
 In mathematics, the Euclidean algorithm, or Euclid's algorithm, 
 is an efficient method for computing the greatest common divisor 
@@ -52,7 +52,7 @@ squares until a `21×147` rectangle is left, which in turn is
 tiled with `21×21` squares, leaving no uncovered area. 
 The smallest square size, `21`, is the GCD of `1071` and `462`.
 
-[JS implementation](EuclideanAlgorithm.js)
+> See [JS implementation](EuclideanAlgorithm.js) of Euclidean algorithm for further details.
 
 ## References
 

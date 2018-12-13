@@ -57,7 +57,7 @@ divided equally among up to `5` players requires at least `60`
 cards, the number at the intersection of the `2`, `3`, `4`
 and `5` sets, but not the `7` set.
 
-[JS implementation](LeastCommonMultiple.js)
+> See [JS implementation](LeastCommonMultiple.js) of Least Common Multiple for further explanation.
 
 ## References
 
