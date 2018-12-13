@@ -19,7 +19,7 @@ potentially more efficient (for nodes other than first nodes) because there
 is no need to keep track of the previous node during traversal or no need 
 to traverse the list to find the previous node, so that its link can be modified.
 
-[JS implementation](DoublyLinkedList.js)
+> See [JS implementation](DoublyLinkedList.js) of Doubly Linked List for further explanation.
 
 ## Pseudocode for Basic Operations
 

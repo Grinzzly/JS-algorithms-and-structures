@@ -84,7 +84,7 @@ unlike ordinary binary search trees.
 
 ![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3d.png)
 
-[JS implementation](RedBalckTree.js)
+> See [JS implementation](RedBalckTree.js) of Red Black Tree for further explanation.
 
 ## References
 

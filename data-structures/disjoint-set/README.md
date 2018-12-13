@@ -14,7 +14,7 @@ In addition to many other uses (see the Applications section), disjoint-sets pla
 
 After some operations of *Union*, some sets are grouped together.
 
-[JS implementation](DisjointSet.js)
+> See [JS implementation](DisjointSet.js) of DisjointSet for further explanation.
 
 ## References
 

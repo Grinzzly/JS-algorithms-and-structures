@@ -37,9 +37,10 @@ There is two ways of graph implementation:
    In graph theory and computer science, an **adjacency matrix** is a square matrix used to represent a finite graph. 
    The elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
 
-Easy way (undirected) graph [JS implementation](GraphUndirected.js)
+> See [JS implementation](Graph.js) of Undirected and Directed graph for further explanation.
 
-Undirected and Directed graph [JS implementation](Graph.js)
+> See easy way [JS implementation](GraphUndirected.js) of (undirected) graph in order to demonstrate 
+BFS and DFS for further explanation.
 
 ## References
 

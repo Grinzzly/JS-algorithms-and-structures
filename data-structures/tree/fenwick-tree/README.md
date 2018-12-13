@@ -30,7 +30,7 @@ array `[1, 2, 3, 4, 5]` by inserting one by one.
 
 ![Fenwick Tree](https://upload.wikimedia.org/wikipedia/commons/d/dc/BITDemo.gif)
 
-[JS implementation](FenwickTree.js)
+> See [JS implementation](FenwickTree.js) of Fenwick Tree for further explanation.
 
 ## References
 

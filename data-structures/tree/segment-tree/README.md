@@ -28,7 +28,7 @@ operations are done.
 
 ![Sum Segment Tree](https://www.geeksforgeeks.org/wp-content/uploads/segment-tree1.png)
 
-[JS implementation](SegmentTree.js)
+> See [JS implementation](SegmentTree.js) of Segment Tree for further explanation.
 
 ## Application
 

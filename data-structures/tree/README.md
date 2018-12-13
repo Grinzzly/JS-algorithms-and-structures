@@ -6,7 +6,6 @@
 * [Red-Black Tree](red-black-tree)
 * [Segment Tree](segment-tree)
 
-
 In computer science, a **tree** is a widely used abstract data 
 type (ADT) — or data structure implementing this ADT—that 
 simulates a hierarchical tree structure, with a root value 

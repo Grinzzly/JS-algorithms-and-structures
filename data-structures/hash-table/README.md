@@ -20,7 +20,7 @@ Hash collision resolved by separate chaining.
 
 ![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
 
-[JS implementation](HashTable.js)
+> See [JS implementation](HashTable.js) of Hash Table for further explanation.
 
 ## References
 

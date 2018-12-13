@@ -17,7 +17,7 @@ prefix tree.
 
 ![Trie](https://upload.wikimedia.org/wikipedia/commons/b/be/Trie_example.svg)
 
-[JS implementation](Trie.js)
+> See [JS implementation](Trie.js) of Trie for further explanation.
 
 ## References
 

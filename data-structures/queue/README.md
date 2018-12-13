@@ -20,7 +20,7 @@ Representation of a FIFO (first in, first out) queue
 
 ![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
 
-[JS implementation](Queue.js)
+> See [JS implementation](Queue.js) of Queue for further explanation.
 
 ## References
 

@@ -104,7 +104,7 @@ are picked and the resulting probability is too high,
 the values should be tweaked and the probability
 re-calculated.
 
-[JS implementation](BloomFilter.js)
+> See [JS implementation](BloomFilter.js) of Bloom Filter for further explanation.
 
 ## Applications
 

@@ -38,7 +38,7 @@ AVL tree with balance factors (green)
 
 ![Right-Left Rotation](http://btechsmartclass.com/data_structures/ds_images/RL%20Rotation.png)
 
-[JS implementation](AvlTree.js)
+> See [JS implementation](AvlTree.js) of AVL Tree for further explanation.
 
 ## References
 

@@ -18,7 +18,7 @@ to the key of `C`
 The node at the "top" of the heap with no parents is 
 called the root node.
 
-[JS implementation](Heap.js)
+> See [JS implementation](Heap.js) of Heap for further explanation.
 
 ## References
 

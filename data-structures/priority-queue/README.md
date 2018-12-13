@@ -17,7 +17,7 @@ Representation of a Priority Queue
 
 ![Priority Queue](https://image.slidesharecdn.com/tykxbx1qt3gvw8hke5wj-signature-5b118c8a0ba552f473b806417bb347756b88ab1cfa0d526c23f757d3f364c134-poli-150620214152-lva1-app6892/95/queue-data-structure-w-php-egs-44-638.jpg?cb=1434836681)
 
-[JS implementation](PriorityQueue.js)
+> See [JS implementation](PriorityQueue.js) of Priority Queue for further explanation.
 
 ## References
 

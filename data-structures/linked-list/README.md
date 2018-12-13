@@ -19,7 +19,7 @@ have better cache locality as compared to linked lists.
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-[JS implementation](LinkedList.js)
+> See [JS implementation](LinkedList.js) of Linked List for further explanation.
 
 ## Pseudocode for Basic Operations
 

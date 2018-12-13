@@ -27,7 +27,7 @@ The leaves are not drawn.
 
 ![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
 
-[JS implementation](BinarySearchTree.js)
+> See [JS implementation](BinarySearchTree.js) of Binary Search Tree for further explanation.
 
 ## Pseudocode for Basic Operations
 

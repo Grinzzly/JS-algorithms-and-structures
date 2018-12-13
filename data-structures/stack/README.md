@@ -19,7 +19,7 @@ Simple representation of a stack runtime with push and pop operations.
 
 ![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
 
-[JS implementation](Stack.js)
+> See [JS implementation](Stack.js) of Stack for further explanation.
 
 ## References
 
