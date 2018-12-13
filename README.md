@@ -49,8 +49,9 @@ a set of rules that precisely define a sequence of operations.
     * [Fibonacci Numbers](algorithms/math/fibonacci)
     * [Euclidean Algorithm (GCD)](algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
     * [Least Common Multiple (LCM)](algorithms/math/least-common-multiple)
-    * [Primality Test](algorithms/math/primality-test) -check whether number is prime or not
+    * [Primality Test](algorithms/math/primality-test) - check whether number is prime or not
     * [Pascal Triangle](algorithms/math/pascal-triangle)
+    * [Sieve of Eratosthenes](algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
