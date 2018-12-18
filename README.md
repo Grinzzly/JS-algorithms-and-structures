@@ -52,6 +52,7 @@ a set of rules that precisely define a sequence of operations.
     * [Primality Test](algorithms/math/primality-test) - check whether number is prime or not
     * [Pascal Triangle](algorithms/math/pascal-triangle)
     * [Sieve of Eratosthenes](algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
+    * [Fast Powering](algorithms/math/fast-powering)
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
