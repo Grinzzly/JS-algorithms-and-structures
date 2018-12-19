@@ -23,7 +23,7 @@ The horizontal lines are pivot values.
 
 ![Quicksort](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
 
-[JS implementation](QuickSort.js)
+> See [JS implementation](QuickSort.js) of Quick Sort algorithm for further explanation. 
 
 ## Complexity
 

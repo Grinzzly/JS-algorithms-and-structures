@@ -12,7 +12,7 @@ in the array.
 
 ![Binary Search](https://upload.wikimedia.org/wikipedia/commons/8/83/Binary_Search_Depiction.svg)
 
-[JS Implementation](BinarySearch.js)
+> See [JS implementation](BinarySearch.js) of Binary Search algorithm for further explanation. 
 
 ## Complexity
 

@@ -9,7 +9,7 @@ are needed, which indicates that the list is sorted.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
-[JS implementation](BubbleSort.js)
+> See [JS implementation](BubbleSort.js) of Bubble Sort algorithm for further explanation. 
 
 ## Complexity
 

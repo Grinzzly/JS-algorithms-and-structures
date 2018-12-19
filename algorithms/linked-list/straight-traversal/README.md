@@ -14,7 +14,7 @@ The order of traversal should be:
 
 The time complexity is `O(n)` because we visit every node only once.
 
-[JS implementation](Traversal.js)
+> See [JS implementation](Traversal.js) of Linked List Traversal algorithm for further explanation. 
 
 ## Reference
 

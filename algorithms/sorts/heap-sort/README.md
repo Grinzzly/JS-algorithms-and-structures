@@ -13,7 +13,7 @@ rather than a linear-time search to find the maximum.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)
 
-[JS implementation](HeapSort.js)
+> See [JS implementation](HeapSort.js) of Heap Sort algorithm for further explanation. 
 
 ## Complexity
 

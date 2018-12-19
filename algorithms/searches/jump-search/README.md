@@ -17,7 +17,7 @@ for linear search. Therefore the total number of comparisons in the worst case
 will be `((n/m) + m - 1)`. The value of the function `((n/m) + m - 1)` will be 
 minimum when `m = √n`. Therefore, the best step size is `m = √n`.
 
-[JS Implementation](JumpSearch.js)
+> See [JS implementation](JumpSearch.js) of Jump Search algorithm for further explanation. 
 
 ## Complexity
 

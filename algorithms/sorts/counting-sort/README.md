@@ -54,7 +54,7 @@ zero.
  
 ![Counting Sort](https://1.bp.blogspot.com/-xPqylngqASY/WLGq3p9n9vI/AAAAAAAAAHM/JHdtXAkJY8wYzDMBXxqarjmhpPhM0u8MACLcB/s1600/ResultArrayCS.gif)
 
-[JS implementation](CountingSort.js)
+> See [JS implementation](CountingSort.js) of Counting Sort algorithm for further explanation. 
 
 ## Complexity
 

@@ -8,7 +8,7 @@ comparisons, where `n` is the length of the list.
 
 ![Linear Search](https://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif)
 
-[JS implementation](LinearSearch.js)
+> See [JS implementation](LinearSearch.js) of Linear Search algorithm for further explanation. 
 
 ## Complexity
 

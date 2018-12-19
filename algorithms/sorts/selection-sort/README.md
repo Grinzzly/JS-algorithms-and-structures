@@ -13,7 +13,7 @@ memory is limited.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
 
-[JS implementation](SelectionSort.js)
+> See [JS implementation](SelectionSort.js) of Selection Sort algorithm for further explanation. 
 
 ## Complexity
 

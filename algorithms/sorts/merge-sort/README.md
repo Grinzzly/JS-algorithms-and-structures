@@ -22,7 +22,7 @@ emulate merge sort (top-down).
 
 ![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
 
-[JS implementation]
+> See [JS implementation](MergeSort.js) of Merge Sort algorithm for further explanation. 
 
 ## Complexity
 

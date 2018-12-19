@@ -9,7 +9,7 @@ string into the other. In a more general context, the Hamming
 distance is one of several string metrics for measuring the 
 edit distance between two sequences.
 
-[JS implementation](HammingDistance.js)
+> See [JS implementation](HammingDistance.js) of Hamming Distance detection algorithm for further explanation. 
 
 ## Examples
 

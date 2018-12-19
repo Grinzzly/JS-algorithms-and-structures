@@ -19,8 +19,7 @@ The steps are:
 
 ![Bucket Sort](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Bucket_sort_2.svg/311px-Bucket_sort_2.svg.png)
 
-
-[JS implementation](BucketSort.js)
+> See [JS implementation](BucketSort.js) of Bucket Sort algorithm for further explanation. 
 
 ## Pseudocode for Implementation
 
