@@ -12,7 +12,7 @@ const fastPowering = (base, power) => {
 
   /**
     * If the power is even it may be recursively redefined as twice smaller powers
-    * and the sum with power of one
+    * and the sum with base raised to power of one
     */
   const multiplier = fastPowering(base, Math.floor(power / 2));
 

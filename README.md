@@ -53,6 +53,7 @@ a set of rules that precisely define a sequence of operations.
     * [Pascal Triangle](algorithms/math/pascal-triangle)
     * [Sieve of Eratosthenes](algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
     * [Fast Powering](algorithms/math/fast-powering)
+    * [Integer Partition](algorithms/math/integer-partition)
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
