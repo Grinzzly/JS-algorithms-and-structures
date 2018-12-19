@@ -18,7 +18,7 @@ calculates the distance through it to each unvisited neighbor,
 and updates the neighbor's distance if smaller. Mark visited
 (set to red) when done with neighbors.
 
-[JS implementation](Dijkstra.js)
+> See [JS implementation](Dijkstra.js) of Dijkstra's Algorithm for further explanation. 
 
 ## References
 

@@ -8,7 +8,7 @@ along each branch before backtracking.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif)
 
-[JS implementation](../../../data-structures/graph/GraphUndirected.js)
+> See [JS implementation](../../../data-structures/graph/GraphUndirected.js) of Depth-First Search algorithm for further explanation. 
 
 ## References
 

@@ -15,7 +15,7 @@ Worst-case performance `O(|V||E|)`
 Best-case performance	`O(|E|)`
 Worst-case space complexity `O(|V|)`
 
-[JS implementation](BellmanFord.js)
+> See [JS implementation](BellmanFord.js) of Bellman Ford algorithm for further explanation. 
 
 ## References
 
