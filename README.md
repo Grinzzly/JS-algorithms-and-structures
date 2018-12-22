@@ -54,6 +54,7 @@ a set of rules that precisely define a sequence of operations.
     * [Sieve of Eratosthenes](algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
     * [Fast Powering](algorithms/math/fast-powering)
     * [Integer Partition](algorithms/math/integer-partition)
+    * [Integer Partition](algorithms/math/is-power-of-two)
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
