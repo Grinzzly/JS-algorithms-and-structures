@@ -55,6 +55,7 @@ a set of rules that precisely define a sequence of operations.
     * [Fast Powering](algorithms/math/fast-powering)
     * [Integer Partition](algorithms/math/integer-partition)
     * [Integer Partition](algorithms/math/is-power-of-two)
+    * [Radians](algorithms/math/radians) - radians and degrees conversions
 * Sorting Algorithms
     * [Bubble Sort](algorithms/sorts/bubble-sort)
     * [Selection Sort](algorithms/sorts/selection-sort)
