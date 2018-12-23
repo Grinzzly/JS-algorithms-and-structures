@@ -80,3 +80,4 @@ a set of rules that precisely define a sequence of operations.
     * [Bellman-Ford Algorithm](algorithms/graphs/bellman-ford) - finding shortest paths to all graph vertices from given one
 * Strings
     * [Hamming Distance](algorithms/strings/hamming-distance) - amount of positions at which the symbols are different
+    * [Levenshtein Distance](algorithms/strings/levenshtein-distance) - difference between two sequences
