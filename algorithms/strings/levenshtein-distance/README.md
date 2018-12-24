@@ -29,6 +29,8 @@ deletion (from `a` to `b`), the second to insertion and
 the third to match or mismatch, depending on whether the
 respective symbols are the same.
 
+> See [JS implementation](LevenshteinDistance.js) of Levenshtein Distance detection algorithm for further explanation.
+
 ## Example
 
 For example, the Levenshtein distance between `kitten` and
