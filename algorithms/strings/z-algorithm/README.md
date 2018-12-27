@@ -50,6 +50,8 @@ Z[] =  x 0 6 0 4 0 2 0
 
 ![z-box](https://ivanyu.me/wp-content/uploads/2014/09/zalg1.png)
 
+> See [JS implementation](zAlgorithm.js) of Z Algorithm for further explanation.
+
 ## Complexity
 
 - **Time:** `O(|W| + |T|)`

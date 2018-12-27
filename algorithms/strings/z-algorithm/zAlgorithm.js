@@ -47,9 +47,11 @@ function zBuilder(zString) {
         zBoxRightIndex += 1;
       }
 
-      // Now we may calculate how many characters starting from current position
-      // are are the same as the prefix. We may calculate it by difference between
-      // right and left Z box boundaries.
+      /**
+       * Now we may calculate how many characters starting from current position
+       * are are the same as the prefix. We may calculate it by difference between
+       * right and left Z box boundaries.
+       */
       zArray[charIndex] = zBoxRightIndex - zBoxLeftIndex;
 
       // Move right Z box boundary left by one position just because we've used
