@@ -83,3 +83,5 @@ a set of rules that precisely define a sequence of operations.
     * [Levenshtein Distance](algorithms/strings/levenshtein-distance) - difference between two sequences
     * [Knuth–Morris–Pratt Algorithm (KMP Algorithm)](algorithms/strings/knuth-morris-pratt) - substring search (pattern matching)
     * [Z Algorithm](algorithms/strings/z-algorithm) - finds occurrences of a word
+* Sets
+    * [Cartesian Product](algorithms/sets/cartesian-product) - product of multiple sets

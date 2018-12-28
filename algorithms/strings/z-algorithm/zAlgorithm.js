@@ -1,10 +1,7 @@
-/* The string separator that is being used for "word" and "text" concatenation. */
 const SEPARATOR = '$';
 
 function zBuilder(zString) {
   const zArray = new Array(zString.length).fill(0);
-
-  /* Z box boundaries. */
   let zBoxLeftIndex = 0;
   let zBoxRightIndex = 0;
 
@@ -49,14 +46,14 @@ function zBuilder(zString) {
 
       /**
        * Now we may calculate how many characters starting from current position
-       * are are the same as the prefix. We may calculate it by difference between
+       * are the same as the prefix. We may calculate it by difference between
        * right and left Z box boundaries.
        */
       zArray[charIndex] = zBoxRightIndex - zBoxLeftIndex;
 
       zBoxRightIndex -= 1;
     } else {
-      /* We're INSIDE of Z box. */
+      /* INSIDE of Z box. */
       zBoxShift = charIndex - zBoxLeftIndex;
 
       if (zArray[zBoxShift] < (zBoxRightIndex - charIndex) + 1) {
@@ -65,8 +62,7 @@ function zBuilder(zString) {
         /**
          * In case if previously calculated values forces us to go outside of Z box
          * we can't safely copy previously calculated zArray value. It is because
-         * we are sure that there is no further prefix matches outside of Z box.
-         * Thus such values must be re-calculated and reduced to certain point.
+         * there is no prefix matches outside of Z box.
          */
         zBoxLeftIndex = charIndex;
 
@@ -107,6 +103,7 @@ const zAlgorithm = (text, word) => {
       wordPositions.push(wordPosition);
     }
   }
+
   return wordPositions;
 };
 
