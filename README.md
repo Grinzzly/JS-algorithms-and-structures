@@ -86,3 +86,6 @@ a set of rules that precisely define a sequence of operations.
     * [Z Algorithm](algorithms/strings/z-algorithm) - finds occurrences of a word
 * Sets
     * [Cartesian Product](algorithms/sets/cartesian-product) - product of multiple sets
+* Cryptography
+    * [Cartesian Product](algorithms/cryptography/polynomial-hash)
+
